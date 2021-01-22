@@ -328,7 +328,7 @@ var RadarTooltipItem = React.memo(function (_ref) {
       return [React__default.createElement(tooltip.Chip, {
         key: key,
         color: colorByKey[key]
-      }), key, tooltipFormatter(datum[key], key)];
+      }), key, tooltipFormatter(datum[key], key, index)];
     });
     rows.sort(function (a, b) {
       return a[2] - b[2];
@@ -538,10 +538,6 @@ var RadarDefaultProps = {
   motionStiffness: 90
 };
 
-require('react-dom');
-window.React2 = require('react');
-console.log("IN NIVO RADAR");
-console.log(window.React1 === window.React2);
 var Radar = React.memo(function (_ref) {
   var data = _ref.data,
       keys = _ref.keys,
